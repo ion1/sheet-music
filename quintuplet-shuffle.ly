@@ -15,7 +15,7 @@ Drums = \repeat volta 4 <<
         \tuplet 5/4 { sn16 hhho8 bd16 hh } |
         \tuplet 5/4 { hh16 bd hh bd hh }
         \tuplet 3/2 { sn8. hh8 bd16 }
-        \tuplet 5/4 { sn16 bd hh sn bd hh sn bd hh sn } |
+        \tuplet 5/4 { tomh16 bd hh tommh bd hh tomml bd hh tomfh } |
       }
     }
   }

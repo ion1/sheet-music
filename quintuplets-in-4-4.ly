@@ -1,29 +1,35 @@
-\score {
-  <<
-  \new DrumVoice {
+Drums = <<
+  \new DrumStaff {
     \drummode {
-      cymc4 cymr cymr cymr |
-      cymr4 cymr cymr cymr |
-      cymc4 cymr cymr cymr |
-      cymr4 cymr cymr cymr |
-      cymc4 cymr cymr cymr |
-      cymr4 cymr cymr cymr |
-    }
-  }
-  \new DrumVoice {
-    \drummode {
-      \tuplet 5/4 {
-        bd8 hh bd sn hh bd bd hh bd sn |
-        hh8 bd bd hh bd sn hh bd bd hh |
-        bd8 sn hh bd bd hh bd sn hh bd |
-        bd8 hh bd sn hh bd bd hh bd sn |
-        hh8 bd bd hh bd sn hh bd bd hh |
-        bd8 sn hh bd bd hh bd sn hh bd |
+      \tempo 4 = 90
+      \repeat volta 4 {
+        \repeat unfold 6 {
+          \repeat unfold 2 { wbl8 trim wbh trim } |
+        }
       }
     }
   }
-  >>
+  \new DrumStaff {
+    \drummode {
+      \repeat volta 4 {
+        \tuplet 5/4 {
+          bd8 hh bd sn hh bd bd hh bd sn |
+          hh8 bd bd hh bd sn hh bd bd hh |
+          bd8 sn hh bd bd hh bd sn hh bd |
+          bd8 hh bd sn hh bd bd hh bd sn |
+          hh8 bd bd hh bd sn hh bd bd hh |
+          bd8 sn hh bd bd hh bd sn hh bd |
+        }
+      }
+    }
+  }
+>>
 
+\score {
+  << \Drums >>
   \layout {}
+}
+\score {
+  \unfoldRepeats << \Drums >>
   \midi {}
 }

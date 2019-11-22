@@ -1,7 +1,13 @@
-Drums = <<
-  \new DrumStaff {
+Time = {
     \tempo 4 = 100
     \time 7/8
+    \set Timing.beamExceptions = #'()
+    \set Timing.beatStructure = #'(4 3)
+}
+
+Drums = <<
+  \new DrumStaff {
+    \Time
     \repeat volta 2 {
       \drummode <<
         \new DrumVoice { \repeat unfold 2 { r2.. | } }
@@ -17,15 +23,14 @@ Drums = <<
     }
   }
   \new DrumStaff {
-    \tempo 4 = 100
-    \time 7/8
+    \Time
     \repeat volta 2 {
       \drummode <<
         \new DrumVoice { \voiceOne
           \repeat unfold 2 { r16 hhho8. hh8 hh hh hh hh | }
         }
         \new DrumVoice { \voiceTwo
-          \repeat unfold 2 { r16 bd8. sn ss8 ss16 bd8 sn8 | }
+          \repeat unfold 2 { r16 bd8. sn ss16 r ss bd8 sn8 | }
         }
       >>
     }
@@ -35,7 +40,7 @@ Drums = <<
           \repeat unfold 2 { r16 hhho8. hh8 hh hh hh hh | }
         }
         \new DrumVoice { \voiceTwo
-          \repeat unfold 2 { r16 bd8. sn ss8 ss16 bd8 sn8 | }
+          \repeat unfold 2 { r16 bd8. sn ss16 r ss bd8 sn8 | }
         }
       >>
     }

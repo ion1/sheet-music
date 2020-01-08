@@ -1,5 +1,5 @@
 Time = {
-  \tempo 4 = 60
+  \tempo 4 = 90
   \time 8/8
   \set Timing.beamExceptions = #'()
   \set Timing.beatStructure = #'(4 4)

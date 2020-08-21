@@ -5,16 +5,16 @@ Drums =
     \repeat volta 4 {
       \drummode <<
         \new DrumVoice { \voiceOne
-          hhho8. hh16. hh hhho8. hh16. hh hhho8. hh16~ |
-          hh32 hh16. hhho8. hh16. hh hhho8. hh16. hh hhho8~ |
-          hh16 hh16. hh hhho8. hh16. hh16. hhho8. hh16. hh |
+          \tuplet 4/3 {
+            \repeat unfold 8 { hhho4 hh8 hh } |
+          }
           \tuplet 5/4 {
             hhho4 hh8 hh hhho4 hh8 hh hhho4 |
             hh8 hh hhho4 hh8 hh hhho4 hh8 hh |
           }
         }
         \new DrumVoice { \voiceTwo
-          \repeat unfold 5 { bd4 bd bd bd | }
+          \repeat unfold 5 { <bd ss>4 ss ss ss | }
         }
       >>
     }

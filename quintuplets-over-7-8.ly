@@ -26,7 +26,8 @@ Drums = <<
     \repeat volta 4 {
       \drummode <<
         \new DrumVoice { \voiceOne
-          \repeat unfold 8 { \repeat unfold 7 { hh8 } | }
+          \repeat unfold 14 { hho8 hh hh hh } |
+          % \repeat unfold 8 { \repeat unfold 7 { hh8 } | }
         }
         \new DrumVoice { \voiceTwo
           \repeat unfold 8 { bd4 sn bd8 bd sn | }

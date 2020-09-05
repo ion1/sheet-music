@@ -14,8 +14,11 @@ Drums = <<
           \tuplet 5/4 {
             \override Beam.breakable = ##t
             agh8[ agl
-            \repeat unfold 33 { agh8 agl }
-            agh agl] |
+            \repeat unfold 16 { agh8 agl }
+            agh] |
+            agl8[ agh
+            \repeat unfold 16 { agl8 agh }
+            agl] |
           }
         }
       >>

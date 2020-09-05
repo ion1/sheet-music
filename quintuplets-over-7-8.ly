@@ -1,5 +1,5 @@
 Time = {
-  \tempo 4 = 80
+  \tempo 4 = 60
   \time 7/8
   \set Timing.beamExceptions = #'()
   \set Timing.beatStructure = #'(4 3)
@@ -11,15 +11,12 @@ Drums = <<
     \repeat volta 4 {
       \drummode <<
         \new DrumVoice { \voiceOne
-          \tuplet 5/4 {
-            \override Beam.breakable = ##t
-            agh8[ agl
-            \repeat unfold 16 { agh8 agl }
-            agh] |
-            agl8[ agh
-            \repeat unfold 16 { agl8 agh }
-            agl] |
+          \override Beam.breakable = ##t
+          \repeat unfold 7 {
+            \tuplet 5/4 { agh8[ agl agh agl agh] }
+            \tuplet 5/4 { agl8[ agh agl agh agl] }
           }
+          |
         }
       >>
     }
